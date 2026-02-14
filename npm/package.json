@@ -1,9 +1,18 @@
 {
   "name": "@apiverve/textstyler",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "Text Styler is a simple tool for styling text in various ways. It returns the styled text.",
   "main": "index.js",
   "types": "index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "mocha",
     "example": "node examples/basic.js"
@@ -14,14 +23,18 @@
     "directory": "npm"
   },
   "keywords": [
-    "text styler", "text styling", "text style", "text style api", "text style tool"
+    ""
   ],
-  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "author": {
+    "name": "APIVerve",
+    "email": "hello@apiverve.com",
+    "url": "https://apiverve.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apiverve/textstyler-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/textstyler?utm_source=npm",
+  "homepage": "https://apiverve.com/marketplace/textstyler?utm_source=npm&utm_medium=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
