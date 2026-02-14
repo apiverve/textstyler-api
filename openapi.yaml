@@ -1,23 +1,27 @@
 openapi: 3.0.4
 info:
   title: Text Styler
-  description: Text Styler is a simple tool for styling text in various ways. It returns the styled text.
+  description: >-
+    Text Styler is a simple tool for styling text in various ways. It returns
+    the styled text.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/textstyler:
     post:
       summary: Style Text in Bubbles
-      description: Text Styler is a simple tool for styling text in various ways. It returns the styled text.
+      description: >-
+        Text Styler is a simple tool for styling text in various ways. It
+        returns the styled text.
       operationId: textstyler
       parameters: []
       responses:
@@ -35,11 +39,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   style: bubbles
                   text: Ⓣⓗⓘⓢ ⓘⓢ ⓐ ⓥⓔⓡⓨ ⓢⓣⓨⓛⓘⓢⓗ ⓟⓘⓔⓒⓔ ⓞⓕ ⓣⓔⓧⓣ
@@ -48,7 +52,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -58,18 +62,13 @@ paths:
               properties:
                 text:
                   type: string
-                  description: 'The style you want to apply to the text. Allowed styles: strikeThrough, wingdings, vaporwave, typewriter, analucia, tildeStrikeThrough, underline, doubleUnderline, slashThrough, sparrow, heartsBetween, arrowBelow, crossAboveBelow, creepify, bubbles, mirror, squares, roundsquares, flip, tiny'
-                  example: This is a very stylish piece of text
+                  description: The text to style
                 style:
                   type: string
-                  description: 'The style you want to apply to the text. Allowed styles: strikeThrough, wingdings, vaporwave, typewriter, analucia, tildeStrikeThrough, underline, doubleUnderline, slashThrough, sparrow, heartsBetween, arrowBelow, crossAboveBelow, creepify, bubbles, mirror, squares, roundsquares, flip, tiny'
-                  example: bubbles
+                  description: The style to apply
               required:
-              - text
-              - style
-              example:
-                text: This is a very stylish piece of text
-                style: bubbles
+                - text
+                - style
 components:
   securitySchemes:
     api_key:
@@ -77,4 +76,7 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  text: This is a very stylish piece of text
+  style: bubbles
