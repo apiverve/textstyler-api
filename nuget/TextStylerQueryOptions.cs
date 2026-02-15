@@ -11,15 +11,13 @@ namespace APIVerve.API.TextStyler
     public class TextStylerQueryOptions
     {
         /// <summary>
-        /// The style you want to apply to the text. Allowed styles: strikeThrough, wingdings, vaporwave, typewriter, analucia, tildeStrikeThrough, underline, doubleUnderline, slashThrough, sparrow, heartsBetween, arrowBelow, crossAboveBelow, creepify, bubbles, mirror, squares, roundsquares, flip, tiny
-        /// Example: hello world
+        /// The text to style
         /// </summary>
         [JsonProperty("text")]
         public string Text { get; set; }
 
         /// <summary>
-        /// The style you want to apply to the text. Allowed styles: strikeThrough, wingdings, vaporwave, typewriter, analucia, tildeStrikeThrough, underline, doubleUnderline, slashThrough, sparrow, heartsBetween, arrowBelow, crossAboveBelow, creepify, bubbles, mirror, squares, roundsquares, flip, tiny
-        /// Example: bubbles
+        /// The style to apply
         /// </summary>
         [JsonProperty("style")]
         public string Style { get; set; }
