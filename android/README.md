@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:textstyler-api:1.1.13'
+    implementation 'com.github.apiverve:textstyler-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ TextStylerAPIClient client = new TextStylerAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "hello world");
+    parameters.put("text", "This is a very stylish piece of text");
     parameters.put("style", "bubbles");
 
     // Execute the request
