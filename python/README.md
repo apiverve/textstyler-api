@@ -44,7 +44,10 @@ from apiverve_textstyler.apiClient import TextstylerAPIClient
 # Initialize the client with your APIVerve API key
 api = TextstylerAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "This is a very stylish piece of text", "style": "bubbles" }
+query = {
+    "text": "This is a very stylish piece of text",
+    "style": "bubbles"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "This is a very stylish piece of text", "style": "bubbles" }
+query = {
+    "text": "This is a very stylish piece of text",
+    "style": "bubbles"
+}
 ```
 
 ###### Simple Request
@@ -121,7 +127,10 @@ from apiverve_textstyler.apiClient import TextstylerAPIClient, TextstylerAPIClie
 
 api = TextstylerAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "This is a very stylish piece of text", "style": "bubbles" }
+query = {
+    "text": "This is a very stylish piece of text",
+    "style": "bubbles"
+}
 
 try:
     result = api.execute(query)
@@ -142,7 +151,10 @@ from apiverve_textstyler.apiClient import TextstylerAPIClient, TextstylerAPIClie
 
 api = TextstylerAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "This is a very stylish piece of text", "style": "bubbles" }
+query = {
+    "text": "This is a very stylish piece of text",
+    "style": "bubbles"
+}
 
 try:
     result = api.execute(query)
@@ -176,7 +188,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_textstyler.apiClient import TextstylerAPIClient, TextstylerAPIClientError
 
-query = { "text": "This is a very stylish piece of text", "style": "bubbles" }
+query = {
+    "text": "This is a very stylish piece of text",
+    "style": "bubbles"
+}
 
 # Using context manager ensures proper cleanup
 with TextstylerAPIClient("[YOUR_API_KEY]") as api:
@@ -202,7 +217,10 @@ from apiverve_textstyler.apiClient import TextstylerAPIClient
 # Enable debug mode
 api = TextstylerAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "This is a very stylish piece of text", "style": "bubbles" }
+query = {
+    "text": "This is a very stylish piece of text",
+    "style": "bubbles"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -217,8 +235,12 @@ from apiverve_textstyler.apiClient import TextstylerAPIClient
 
 api = TextstylerAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "This is a very stylish piece of text",
+    "style": "bubbles"
+}
+
 try:
-    query = { "text": "This is a very stylish piece of text", "style": "bubbles" }
     result = api.execute(query)
     print(result)
 finally:
