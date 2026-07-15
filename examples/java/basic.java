@@ -12,8 +12,13 @@ public class BasicExample {
         TextStylerAPIClient client = new TextStylerAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Request body
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;text&quot;, &quot;This is a very stylish piece of text&quot;);
+        parameters.put(&quot;style&quot;, &quot;bubbles&quot;);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
