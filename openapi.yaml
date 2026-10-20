@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Text Styler
   description: >-
-    Text Styler is a simple tool for styling text in various ways. It returns
-    the styled text.
+    Text Styler converts plain text into styled text formats like bubble
+    letters, strikethrough, typewriter, and vaporwave. Submit your string with a
+    chosen style to receive the formatted text output.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/textstyler:
     post:
-      summary: Style Text in Bubbles
+      summary: Text Styler
       description: >-
         Text Styler is a simple tool for styling text in various ways. It
         returns the styled text.
