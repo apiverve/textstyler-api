@@ -1,7 +1,7 @@
 {
     "name": "apiverve/textstyler",
     "description": "Text Styler converts plain text into styled text formats like bubble letters, strikethrough, typewriter, and vaporwave. Submit your string with a chosen style to receive the formatted text output.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
